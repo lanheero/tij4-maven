@@ -32,4 +32,12 @@ Glyph() before draw()
 RoundGlyph.draw(), radius = 0
 Glyph() after draw()
 RoundGlyph.RoundGlyph(), radius = 5
+
+順序
+1.任何事情發生前，配置給此物件的儲存空間會被初始化為二進制零值
+2.先呼叫base class constructor，但覆寫後的draw()會被呼叫，所以看到radius為0
+3.以「成員宣告順序」來呼叫各成員初始式(initializers)
+4.呼叫derived class consturctor 來建構本體
+
 *///:~
+
